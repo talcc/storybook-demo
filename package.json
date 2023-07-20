@@ -1,12 +1,17 @@
 {
   "name": "story-book-demo",
   "version": "0.0.0",
+  "homepage": "http://talcc.github.io/storybook-demo",
   "scripts": {
     "ng": "ng",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static",
+    "build-storybook": "ng run storyBookDemo:build-storybook",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "ng run storyBookDemo:storybook"
   },
   "private": true,
   "dependencies": {
@@ -26,13 +31,25 @@
     "@angular-devkit/build-angular": "^15.2.7",
     "@angular/cli": "~15.2.7",
     "@angular/compiler-cli": "^15.2.0",
+    "@compodoc/compodoc": "^1.1.21",
+    "@storybook/addon-docs": "^7.1.0",
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/angular": "^7.1.0",
+    "@storybook/blocks": "^7.1.0",
+    "@storybook/testing-library": "^0.2.0",
     "@types/jasmine": "~4.3.0",
+    "gh-pages": "^5.0.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.1.0",
     "typescript": "~4.9.4"
   }
 }
